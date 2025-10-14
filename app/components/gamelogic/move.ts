@@ -1,4 +1,6 @@
+import { rotateLeft, rotateRight } from "./rotateLogic";
 import { slideAndMergeRow } from "./slideMerge";
+
 
 export const move = (board: number[][], direction: 'up' | 'down' | 'left' | 'right'): { newBoard: number[][]; score: number } => {
     let boardToProcess = board.map(row => [...row]);

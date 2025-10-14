@@ -1,4 +1,4 @@
-const rotateLeft = (board: number[][]): number[][] => {
+export const rotateLeft = (board: number[][]): number[][] => {
     const size = board.length;
     const newBoard = Array(size).fill(null).map(() => Array(size).fill(0));
     for (let r = 0; r < size; r++) {
@@ -9,7 +9,7 @@ const rotateLeft = (board: number[][]): number[][] => {
     return newBoard;
 };
 
-const rotateRight = (board: number[][]): number[][] => {
+export const rotateRight = (board: number[][]): number[][] => {
     const size = board.length;
     const newBoard = Array(size).fill(null).map(() => Array(size).fill(0));
     for (let r = 0; r < size; r++) {

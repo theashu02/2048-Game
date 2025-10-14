@@ -1,5 +1,5 @@
 import React from 'react';
-import Tile from './common/Tile';
+import Tile from './Tile';
 
 interface BoardProps {
   board: number[][];
