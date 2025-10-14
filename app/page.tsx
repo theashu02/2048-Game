@@ -3,6 +3,7 @@
 import Board from "./components/Board";
 import { useState, useEffect } from "react";
 import { initializeBoard } from "./components/gamelogic/boardInitialize";
+import { Navbar } from "./components/common/navbar";
 
 function emptyBoard(size: number = 4): number[][] {
   return Array.from({ length: size }, () => Array(size).fill(0));
@@ -18,7 +19,8 @@ export default function Home() {
 
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen">
+      <Navbar />
       <Board board={board} />
     </div>
   );
