@@ -20,7 +20,7 @@ export const addRandomTile = (board: number[][]): number[][] => {
 
 export const initializeBoard = (size: number = 4): number[][] => {
     let board = Array(size).fill(null).map(() => Array(size).fill(0));
-    console.log("Random board ---> ", board);
+    console.log("Get Random board ---> ", board);
     board = addRandomTile(board);
     board = addRandomTile(board);
     return board;
