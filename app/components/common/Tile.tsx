@@ -20,13 +20,13 @@ const TILE_STYLES: { [key: number]: string } = {
 };
 
 const getFontSize = (value: number) => {
-  if (value > 999) return 'text-3xl';
-  if (value > 99) return 'text-4xl';
-  return 'text-5xl';
+  if (value > 999) return 'text-xl sm:text-2xl md:text-3xl';
+  if (value > 99) return 'text-2xl sm:text-3xl md:text-4xl';
+  return 'text-3xl sm:text-4xl md:text-5xl';
 };
 
 const Tile: React.FC<TileProps> = ({ value }) => {
-  const baseClasses = 'w-24 h-24 flex justify-center items-center font-bold rounded-sm transition-all duration-100';
+  const baseClasses = 'w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex justify-center items-center font-bold rounded-sm transition-all duration-100';
   const styleClasses = TILE_STYLES[value] || TILE_STYLES[2048];
   const fontSizeClass = getFontSize(value);
 
